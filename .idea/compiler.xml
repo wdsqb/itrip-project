@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="itrip-utils" />
+        <module name="itrip-auth" />
         <module name="itrip-bean" />
         <module name="itrip-dao" />
-        <module name="itrip-auth" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

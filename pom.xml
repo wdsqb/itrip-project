@@ -29,6 +29,7 @@
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <lombok.version>1.18.12</lombok.version>
         <itrip.version>0.0.1-SNAPSHOT</itrip.version>
+        <aliyun-java-sdk-core.version>4.5.3</aliyun-java-sdk-core.version>
     </properties>
 
     <dependencyManagement>
@@ -77,37 +78,13 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun-java-sdk-core.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**.*</include>
-                    <include>**/*.*</include>
-                    <include>**/*/*.*</include>
-                </includes>
-            </resource>
-        </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

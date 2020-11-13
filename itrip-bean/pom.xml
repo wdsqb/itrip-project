@@ -9,17 +9,44 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+
     <artifactId>itrip-bean</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.hzl</groupId>
-            <artifactId>itrip-dao</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.hzl</groupId>-->
+<!--            <artifactId>itrip-dao</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.hzl</groupId>-->
+<!--                    <artifactId>itrip-bean</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>io.springfox</groupId>-->
+<!--                    <artifactId>springfox-swagger2</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>io.springfox</groupId>-->
+<!--                    <artifactId>springfox-swagger-ui</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.projectlombok</groupId>-->
+<!--                    <artifactId>lombok</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.baomidou</groupId>-->
+<!--                    <artifactId>mybatis-plus</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
         <dependency>
 <!--            mybatis-plus-->
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
@@ -34,5 +61,18 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>

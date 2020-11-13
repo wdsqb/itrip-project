@@ -1,12 +1,10 @@
 package com.hzl.exception;
 
 import com.hzl.common.constants.ErrorCodeEnum;
-import com.sun.javaws.exceptions.ErrorCodeResponseException;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.util.concurrent.atomic.DoubleAccumulator;
 
 /**
  * @author : hzl

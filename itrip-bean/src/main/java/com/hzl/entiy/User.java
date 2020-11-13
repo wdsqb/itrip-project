@@ -1,19 +1,21 @@
 package com.hzl.entiy;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 用户表
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @ApiModel(value = "com-hzl-entiy-User")
 @Data
 @Builder
@@ -89,7 +91,7 @@ public class User implements Serializable {
     @ApiModelProperty(value = "百度账号")
     private String baidu;
 
-    @TableField(value = "creation_date")
+    @TableField(value = "creation_date",fill = FieldFill.INSERT)
     @ApiModelProperty(value = "")
     private Date creationDate;
 
@@ -97,7 +99,7 @@ public class User implements Serializable {
     @ApiModelProperty(value = "")
     private Long createdBy;
 
-    @TableField(value = "modify_date")
+    @TableField(value = "modify_date",fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value = "")
     private Date modifyDate;
 
@@ -115,11 +117,12 @@ public class User implements Serializable {
     /**
      * 逻辑删除
      */
+    @TableLogic
     @TableField(value = "is_deleted")
     @ApiModelProperty(value = "逻辑删除")
     private Integer isDeleted;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 5021535855368516413L;
 
     public static UserBuilder builder() {
         return new UserBuilder();

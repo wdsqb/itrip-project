@@ -1,9 +1,6 @@
 package com.hzl.entiy;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -105,11 +102,13 @@ public class AreaDic implements Serializable {
     /**
      * 逻辑删除（0:未删除；1：删除）
      */
+    @TableLogic
     @TableField(value = "is_deleted")
     @ApiModelProperty(value = "逻辑删除（0:未删除；1：删除）")
     private Integer isDeleted;
 
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = -4818899720637021064L;
 
     public static AreaDicBuilder builder() {
         return new AreaDicBuilder();

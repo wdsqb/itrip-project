@@ -1,0 +1,53 @@
+server:
+  port: 8801
+  servlet:
+    context-path: /auth
+
+spring:
+ # 配置邮件发送基本信息
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 1933284126@qq.com
+    password: qzfzwfytujoaeheh #邮箱密码，需要根据不同的邮箱做不同的配置
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465 #465或者994
+    properties.mail.display.sendmail: Javen
+    properties.mail.display.sendname: Spring Boot Guide Email
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    properties.mail.from: 1933284126@qq.com
+
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itripdb
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+
+#mybatis-plus的配置
+mybatis-plus:
+  configuration:
+    #    日志打印实现
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    #    驼峰命名法自动映射
+    map-underscore-to-camel-case: true
+  #    指定映射文件的路径
+  mapper-locations: classpath:xml/*.xml
+  #    别名
+  type-aliases-package: com.hzl.entity
+  #逻辑删除
+  global-config:
+    db-config:
+      # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-field: isDeleted
+      # 逻辑已删除值(默认为 1)
+      logic-delete-value: 1
+      # 逻辑未删除值(默认为 0)
+      logic-not-delete-value: 0
