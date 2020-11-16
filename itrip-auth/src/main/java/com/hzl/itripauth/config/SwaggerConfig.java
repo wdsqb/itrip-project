@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description :
+ * @description : Swagger配置类
  * @date : 2020-11-12 11:49
  */
 @Configuration

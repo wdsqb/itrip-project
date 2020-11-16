@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description : 
+ * @description :  捕获异常类
  * @date : 2020-11-09 14:37
  */
 @RestControllerAdvice

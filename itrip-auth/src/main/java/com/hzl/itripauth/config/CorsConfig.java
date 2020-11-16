@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description :
+ * @description : 前后端跨域配置
  * @date : 2020-11-12 11:54
  */
 @Configuration

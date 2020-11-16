@@ -20,6 +20,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hzl.mapper.UserMapper;
 import com.hzl.entiy.User;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
@@ -33,8 +34,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     String activeCodeKeyPre = "active:";
 
-//    @Value(value = "${email.send.enable}")
-    private boolean enableSendEmail=true;
+    @Value(value = "${email.send.enable}")
+    private boolean enableSendEmail;
 
     @Resource
     private MailService mailService;
@@ -118,6 +119,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                         break;
             }
         } catch (BeansException e) {
+            TransactionAspectSupport.currentTransactionStatus().flush();
             throw new ServiceException(ErrorCodeEnum.SYSTEM_EXECUTION_ERROR);
         }
         return true;

@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description :
+ * @description : 用户控制器
  * @date : 2020-11-12 09:20
  */
 @RestController
@@ -127,5 +127,6 @@ public class UserController {
         } catch (Exception e) {
             return ReturnResult.error(ErrorCodeEnum.AUTH_ACTIVATE_FAILED);
         }
+        
     }
 }

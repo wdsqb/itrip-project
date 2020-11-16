@@ -4,7 +4,7 @@ package com.hzl.common.constants;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description :
+ * @description : 错误码枚举
  * @date : 2020-11-06 15:46
  */
 public enum ErrorCodeEnum {

@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @author : hzl
  * @version : 4.0
  * @project : itrip-project
- * @description :
+ * @description : 统一的响应对象
  * @date : 2020-11-06 15:50
  */
 @ApiModel(description = "统一返回结果集")
@@ -29,6 +29,9 @@ public class ReturnResult implements Serializable {
     @ApiModelProperty(value = "返回数据")
     private Object data;
 
+    public static ReturnResult error(String errorCode, String msg) {
+        return error(errorCode,msg,null);
+    }
     public ReturnResult(boolean success, String errorCode, String msg, Object data) {
         this.success = success;
         this.errorCode = errorCode;

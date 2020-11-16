@@ -6,7 +6,6 @@ import com.hzl.itripauth.condition.UserRegisterCondition;
 
 public interface UserService extends IService<User> {
 
-
 //    /**
 //     *  用户注册
 //     *  @param condition

@@ -9,7 +9,8 @@ package com.hzl.itripauth.service;
  */
 public interface SmsService {
 
-    /*** 用于发送短信
+    /**
+     *  用于发送短信
      *  @param to 短信发送给谁
      *  @param code 验证码
      */

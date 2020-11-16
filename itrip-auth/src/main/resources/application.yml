@@ -11,14 +11,20 @@ spring:
     username: 1933284126@qq.com
     password: qzfzwfytujoaeheh #邮箱密码，需要根据不同的邮箱做不同的配置
     protocol: smtp
-    properties.mail.smtp.auth: true
-    properties.mail.smtp.port: 465 #465或者994
-    properties.mail.display.sendmail: Javen
-    properties.mail.display.sendname: Spring Boot Guide Email
-    properties.mail.smtp.starttls.enable: true
-    properties.mail.smtp.starttls.required: true
-    properties.mail.smtp.ssl.enable: true
-    properties.mail.from: 1933284126@qq.com
+    properties:
+      mail:
+        form: 1933284126@qq.com
+        smtp:
+          auth: true
+          port: 465 #465或者994
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+        display:
+          sendmail: Javen
+          sendname: Spring Boot Guide Email
 
   datasource:
     username: root
@@ -29,6 +35,9 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
+email:
+  send:
+    enable: true
 
 
 #mybatis-plus的配置

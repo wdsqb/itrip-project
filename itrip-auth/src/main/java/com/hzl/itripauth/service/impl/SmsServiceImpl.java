@@ -36,7 +36,7 @@ public class SmsServiceImpl implements SmsService {
     public void sendMsg(String to, String code) {
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou",
                 //这里我们直接写死用户的accessKeyId和secret
-                "xxxxxxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxxxxxxxxx");
+                "LTAI4GH6r9TNun5vA988NYTa", "sadC8loRP8iMaLsGz2fZLNMQnsggJz");
                 IAcsClient client = new DefaultAcsClient(profile);
                 CommonRequest request = new CommonRequest();
                 request.setSysMethod(MethodType.POST);
@@ -47,7 +47,8 @@ public class SmsServiceImpl implements SmsService {
                 //指定发送的号码，也就是用户注册的号码
                 request.putQueryParameter("PhoneNumbers", to);
                 //指定短信中的前缀
-                request.putQueryParameter("SignName", "爱旅行"); request.putQueryParameter("TemplateCode", "SMS_204111297");
+                request.putQueryParameter("SignName", "酒店客房管理助手");
+                request.putQueryParameter("TemplateCode", "SMS_205461334");
                 //指定变量，也就是生成的code
                  Map<String, Object> jsonMap = new HashMap<>();
                 jsonMap.put("code", code);
@@ -59,7 +60,8 @@ public class SmsServiceImpl implements SmsService {
                 } catch (ServiceException e) {
                     log.error(e.getMessage(), e);
                     throw new ServiceException(ErrorCodeEnum.ERROR_CALLING_THIRD_PARTY_SERVICE);
-                } catch (ClientException e) {
+                }
+                catch (ClientException e) {
                     log.error(e.getMessage(), e);
                     throw new ServiceException(ErrorCodeEnum.ERROR_CALLING_THIRD_PARTY_SERVICE);
                 }

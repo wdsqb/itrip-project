@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -93,7 +95,7 @@ public class User implements Serializable {
 
     @TableField(value = "creation_date",fill = FieldFill.INSERT)
     @ApiModelProperty(value = "")
-    private Date creationDate;
+    private LocalDateTime creationDate;
 
     @TableField(value = "created_by")
     @ApiModelProperty(value = "")
@@ -101,7 +103,7 @@ public class User implements Serializable {
 
     @TableField(value = "modify_date",fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value = "")
-    private Date modifyDate;
+    private LocalDateTime modifyDate;
 
     @TableField(value = "modified_by")
     @ApiModelProperty(value = "")
