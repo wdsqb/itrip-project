@@ -3,8 +3,10 @@ package com.hzl.entity;
 import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,6 +15,8 @@ import java.util.Date;
 @Data
 @Builder
 @TableName(value = "itrip_hotel_extend_property")
+@AllArgsConstructor
+@NoArgsConstructor
 public class HotelExtendProperty implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     @ApiModelProperty(value = "")

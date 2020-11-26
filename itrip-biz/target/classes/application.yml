@@ -4,7 +4,6 @@ server:
         context-path: /biz
 
 spring:
-
     cloud:
         nacos:
             discovery:
