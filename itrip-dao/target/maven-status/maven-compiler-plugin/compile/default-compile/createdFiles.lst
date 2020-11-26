@@ -1,0 +1,16 @@
+com\hzl\mapper\LabelDicMapper.class
+com\hzl\mapper\HotelOrderMapper.class
+com\hzl\mapper\OrderLinkUserMapper.class
+com\hzl\mapper\HotelRoomMapper.class
+com\hzl\mapper\HotelTempStoreMapper.class
+com\hzl\mapper\UserMapper.class
+com\hzl\mapper\HotelExtendPropertyMapper.class
+com\hzl\mapper\HotelTradingAreaMapper.class
+com\hzl\mapper\HotelFeatureMapper.class
+com\hzl\mapper\ImageMapper.class
+com\hzl\mapper\CommentMapper.class
+com\hzl\mapper\AreaDicMapper.class
+com\hzl\mapper\HotelMapper.class
+com\hzl\mapper\ProductStoreMapper.class
+com\hzl\mapper\TradeEndsMapper.class
+com\hzl\mapper\UserLinkUserMapper.class
