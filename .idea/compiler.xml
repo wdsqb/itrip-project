@@ -15,6 +15,16 @@
         <module name="itrip-search" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="itrip-auth" target="1.8" />
+      <module name="itrip-bean" target="1.8" />
+      <module name="itrip-biz" target="1.8" />
+      <module name="itrip-dao" target="1.8" />
+      <module name="itrip-gateway" target="1.8" />
+      <module name="itrip-project" target="1.8" />
+      <module name="itrip-search" target="1.8" />
+      <module name="itrip-utils" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
