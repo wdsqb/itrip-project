@@ -33,9 +33,9 @@ public class SearchHotCityCondition {
     @ApiModelProperty(value = "指定排序,Desc")
     private String DescSort;
     @ApiModelProperty(value = "总页数")
-    private Integer PageSize;
+    private Integer PageSize=10;
     @ApiModelProperty(value = "当前页")
-    private Integer PageNo;
+    private Integer PageNo=0;
     @ApiModelProperty(value = "数据总数量")
-    private Long Count;
+    private Long Count=0L;
 }

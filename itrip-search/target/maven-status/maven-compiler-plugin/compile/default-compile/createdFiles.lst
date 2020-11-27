@@ -1,3 +1,4 @@
+com\hzl\itripsearch\condition\SearchHotelCondition.class
 com\hzl\itripsearch\service\impl\SearchHotelServiceImpl.class
 com\hzl\itripsearch\controller\HotelListController.class
 com\hzl\itripsearch\condition\SearchHotCityCondition.class

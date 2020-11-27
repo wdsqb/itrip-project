@@ -28,7 +28,21 @@ public class LabelDicServiceImpl extends ServiceImpl<LabelDicMapper, LabelDic> i
             return labelDicVO;
         }).collect(Collectors.toList());
         return labelDicVOList;
+    }
 
+    @Override
+    public List<LabelDicVO> findBedTypeLabelDicVO() {
+        QueryWrapper<LabelDic> labelDicQueryWrapper = new QueryWrapper<>();
+        labelDicQueryWrapper.select("id", "name", "description", "pic")
+                .eq("parent_id", 1);
+        List<LabelDic> labelDicList = this.list(labelDicQueryWrapper);
+        //类型转换
+        List<LabelDicVO> labelDicVOList = labelDicList.stream().map(labelDic -> {
+            LabelDicVO labelDicVO = new LabelDicVO();
+            BeanUtils.copyProperties(labelDic, labelDicVO);
+            return labelDicVO;
+        }).collect(Collectors.toList());
+        return labelDicVOList;
     }
 }
 

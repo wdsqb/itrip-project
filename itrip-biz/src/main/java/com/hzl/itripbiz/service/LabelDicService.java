@@ -14,6 +14,11 @@ public interface LabelDicService extends IService<LabelDic> {
      */
     List<LabelDicVO> findLabelDicVO();
 
+    /**
+     * 查询所有的床型
+     * @return
+     */
+    List<LabelDicVO> findBedTypeLabelDicVO();
 
 }
 

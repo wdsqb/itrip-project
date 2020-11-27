@@ -1,10 +1,13 @@
-com\hzl\itripbiz\service\LabelDicService.class
-com\hzl\itripbiz\itripBizApplication.class
 com\hzl\itripbiz\service\HotelService.class
-com\hzl\itripbiz\service\impl\HotelServiceImpl.class
+com\hzl\itripbiz\contoller\HotelRoomController.class
 com\hzl\itripbiz\service\impl\ImageServiceImpl.class
 com\hzl\itripbiz\service\impl\LabelDicServiceImpl.class
 com\hzl\itripbiz\contoller\HotelController.class
+com\hzl\itripbiz\service\LabelDicService.class
+com\hzl\itripbiz\itripBizApplication.class
+com\hzl\itripbiz\service\impl\HotelRoomServiceImpl.class
+com\hzl\itripbiz\service\impl\HotelServiceImpl.class
 com\hzl\itripbiz\service\AreaDicService.class
 com\hzl\itripbiz\service\ImageService.class
 com\hzl\itripbiz\service\impl\AreaDicServiceImpl.class
+com\hzl\itripbiz\service\HotelRoomService.class

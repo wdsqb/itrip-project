@@ -1,0 +1,46 @@
+2020-11-14 09:22:28.885 [http-nio-8801-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed to close server connection after message failures; nested exception is javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Connection closed by remote host. Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-14 09:23:14.110 [http-nio-8801-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-11-14 09:23:39.647 [http-nio-8801-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-11-14 09:23:46.245 [http-nio-8801-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed to close server connection after message failures; nested exception is javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Connection closed by remote host. Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-14 09:25:01.117 [http-nio-8801-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-11-14 09:25:28.635 [http-nio-8801-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-11-14 09:26:05.716 [http-nio-8801-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379]
+2020-11-14 09:27:15.411 [http-nio-8801-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379]
+2020-11-14 09:28:32.409 [http-nio-8801-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-14 09:31:03.552 [http-nio-8801-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed to close server connection after message failures; nested exception is javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Connection closed by remote host. Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-14 09:46:17.903 [http-nio-8801-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-14 09:50:31.748 [http-nio-8801-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-14 10:04:49.609 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s211ms638µs100ns).

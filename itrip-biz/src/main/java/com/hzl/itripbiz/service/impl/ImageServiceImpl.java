@@ -1,6 +1,7 @@
 package com.hzl.itripbiz.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hzl.common.vo.ImageVO;
 import com.hzl.entity.Image;
@@ -9,7 +10,9 @@ import com.hzl.mapper.ImageMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class ImageServiceImpl extends ServiceImpl<ImageMapper, Image> implements ImageService {
@@ -37,6 +40,23 @@ public class ImageServiceImpl extends ServiceImpl<ImageMapper, Image> implements
         return imageVOList;
     }
 
+    @Override
+    public List<ImageVO> getImageVOByTypeAndTarget(Integer typeId, Long targetId) {
+        LambdaQueryWrapper<Image> imageLambdaQueryWrapper = new QueryWrapper<Image>().lambda();
+        imageLambdaQueryWrapper.select(Image::getPosition, Image::getImgUrl)
+                .eq(Image::getTargetId, targetId)
+                .eq(Image::getType, typeId);
+        List<Image> imageList = this.list(imageLambdaQueryWrapper);
+        List<ImageVO> imageVOList = imageList.stream().map(
+                image -> {
+                    ImageVO imageVO = new ImageVO();
+                    imageVO.setImgUrl(image.getImgUrl());
+                    imageVO.setPosition(image.getPosition());
+                    return imageVO;
+                }
+        ).collect(Collectors.toList());
+        return imageVOList;
+    }
 }
 
 

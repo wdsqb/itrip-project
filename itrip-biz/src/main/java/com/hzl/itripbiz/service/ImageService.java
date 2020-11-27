@@ -14,6 +14,14 @@ public interface ImageService extends IService<Image> {
      * @return
      */
     List<ImageVO> getImageVOByHotelId(Long hotelId);
+
+    /**
+     * 根据类型和目标查询图片
+     * @param typeId 图片类型
+     * @param targetId 目标Id
+     * @return
+     */
+    List<ImageVO> getImageVOByTypeAndTarget(Integer typeId,Long targetId);
 }
 
 

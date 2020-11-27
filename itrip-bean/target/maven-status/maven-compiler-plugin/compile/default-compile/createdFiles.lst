@@ -20,16 +20,19 @@ com\hzl\entity\HotelOrder$HotelOrderBuilder.class
 com\hzl\entity\User$UserBuilder.class
 com\hzl\entity\AreaDic.class
 com\hzl\entity\LabelDic$LabelDicBuilder.class
+com\hzl\common\vo\HotelRoomVO.class
 com\hzl\exception\ServiceException.class
 com\hzl\entity\HotelExtendProperty.class
 com\hzl\entity\HotelTradingArea.class
 com\hzl\common\vo\SearchDetailHotelVO.class
 com\hzl\exception\DaoException.class
 com\hzl\entity\User.class
+com\hzl\common\condition\ValidateRoomStoreCondition.class
 com\hzl\entity\UserLinkUser.class
 com\hzl\common\vo\ImageVO.class
 com\hzl\common\vo\LabelDicVO.class
 com\hzl\entity\Image$ImageBuilder.class
+com\hzl\common\condition\HotelRoomCondition.class
 com\hzl\entity\TradeEnds.class
 com\hzl\common\vo\SearchFacilitiesHotelVO.class
 com\hzl\entity\UserLinkUser$UserLinkUserBuilder.class
@@ -41,4 +44,5 @@ com\hzl\entity\ProductStore$ProductStoreBuilder.class
 com\hzl\entity\TradeEnds$TradeEndsBuilder.class
 com\hzl\common\vo\TokenVo.class
 com\hzl\entity\HotelExtendProperty$HotelExtendPropertyBuilder.class
+com\hzl\common\vo\RoomStoreVO.class
 com\hzl\entity\HotelRoom$HotelRoomBuilder.class

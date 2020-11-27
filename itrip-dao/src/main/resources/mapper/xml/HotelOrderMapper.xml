@@ -40,4 +40,38 @@
     notice_phone, notice_email, special_requirement, is_need_invoice, invoice_type, invoice_head, 
     link_user_name, book_type, creation_date, created_by, modify_date, modified_by, is_deleted
   </sql>
+  <select id="selectRoomStoreVOByCondition"
+          parameterType="com.hzl.common.condition.ValidateRoomStoreCondition"
+          resultType="com.hzl.common.vo.RoomStoreVO">
+    select itrip_hotel.id as hotel_id,
+    itrip_hotel_room.id as room_id,
+    itrip_hotel.hotel_name,
+    ifnull(itrip_hotel_temp_store.store, 0) - (
+    case
+    when `order`.count is null then 0
+    else `order`.count
+    end
+    ) as store
+    from itrip_hotel_room
+    left join itrip_hotel on itrip_hotel.id = itrip_hotel_room.hotel_id
+    left join itrip_hotel_temp_store on itrip_hotel_temp_store.room_id =
+    itrip_hotel_room.id
+    left join (select itrip_hotel_order.room_id, sum(itrip_hotel_order.count) as `count`
+    from itrip_hotel_order
+    where itrip_hotel_order.order_status = 0
+    group by itrip_hotel_order.room_id) as `order` on `order`.room_id =
+    itrip_hotel_room.id
+    where 1=1
+    <if test="hotelId != null and hotelId >0 ">
+      and itrip_hotel.id = #{hotelId,jdbcType=BIGINT}
+    </if>
+    <if test="roomId != null and roomId >0">
+      and itrip_hotel_room.id = #{roomId,jdbcType=BIGINT}
+    </if>
+    <if test="checkInDate != null and checkOutDate != null">
+      and itrip_hotel_temp_store.record_date between #{checkInDate,jdbcType=DATE} and
+      #{checkOutDate,jdbcType=DATE}
+    </if>
+    group by itrip_hotel.id, itrip_hotel_room.id
+  </select>
 </mapper>

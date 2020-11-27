@@ -89,8 +89,7 @@ public class SearchHotelServiceImpl implements SearchHotelService {
         if (!StringUtils.isEmpty(condition.getDescSort())) {
             order = Sort.Order.desc(condition.getDescSort());
         }
-        PageRequest pageable = PageRequest.of(condition.getPageNo(),
-                condition.getPageSize());
+        PageRequest pageable = PageRequest.of(condition.getPageNo(),condition.getPageSize());
         if (order != null) {
             pageable = PageRequest.of(condition.getPageNo(),
                     condition.getPageSize(), Sort.by(order));

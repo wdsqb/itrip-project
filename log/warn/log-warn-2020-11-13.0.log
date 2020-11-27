@@ -1,0 +1,73 @@
+2020-11-13 09:08:17.146 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s606ms597µs900ns).
+2020-11-13 09:08:53.775 [http-nio-8801-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+]
+2020-11-13 09:10:06.715 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s552ms632µs800ns).
+2020-11-13 09:10:06.722 [http-nio-8801-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+]
+2020-11-13 09:11:52.282 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+]
+2020-11-13 09:18:25.881 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+]
+2020-11-13 09:20:47.311 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.hzl.itripauth]' package. Please check your configuration.
+2020-11-13 09:21:38.033 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com]
+2020-11-13 09:22:03.028 [http-nio-8801-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: 1933284126@qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: 1933284126@qq.com]
+2020-11-13 09:24:57.908 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.qq.com, 994; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect]
+2020-11-13 11:44:23.032 [http-nio-8801-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-13 11:44:55.176 [http-nio-8801-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-13 11:48:03.675 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.mail.MailSendException: Failed to close server connection after message failures; nested exception is javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Connection closed by remote host. Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+; message exceptions (1) are:
+Failed message 1: com.sun.mail.smtp.SMTPSendFailedException: 501 Mail from address must be same as authorization user.
+;
+  nested exception is:
+	com.sun.mail.smtp.SMTPSenderFailedException: 501 Mail from address must be same as authorization user.
+]
+2020-11-13 12:10:38.748 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s105ms65µs).
+2020-11-13 16:58:56.025 [http-nio-8801-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-13 17:00:07.529 [http-nio-8801-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-13 17:00:13.302 [http-nio-8801-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-13 17:02:14.294 [http-nio-8801-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]
+2020-11-13 17:02:42.099 [http-nio-8801-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [ServiceException(errorCode=30001)]

@@ -23,8 +23,50 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, hotel_id, room_title, room_price, room_bed_type_id, is_having_breakfast, pay_type, 
+    id, hotel_id, room_title, room_price, room_bed_type_id, is_having_breakfast, pay_type,
     satisfaction, is_book, is_cancel, is_timely_response, creation_date, created_by, 
     modify_date, modified_by, is_deleted
   </sql>
+  <select id="selectHotelRoomVOByCondition"
+          parameterType="com.hzl.common.condition.HotelRoomCondition"
+          resultType="com.hzl.common.vo.HotelRoomVO">
+    select
+    itrip_hotel_room.id,
+    itrip_hotel_room.hotel_id,
+    itrip_hotel_room.room_title,
+    itrip_hotel_room.room_price,
+    itrip_hotel_room.room_bed_type_id,
+    itrip_hotel_room.is_having_breakfast,
+    itrip_hotel_room.pay_type,
+    itrip_hotel_room.satisfaction,
+    itrip_hotel_room.is_book,
+    itrip_hotel_room.is_cancel,
+    itrip_hotel_room.is_timely_response
+    from itrip_hotel_room left join itrip_hotel_temp_store on itrip_hotel_temp_store.room_id = itrip_hotel_room.id
+    where itrip_hotel_room.hotel_id = #{hotelId,jdbcType=BIGINT}
+    <if test="isBook != null">
+      and itrip_hotel_room.is_book = #{isBook,jdbcType=INTEGER}
+    </if>
+    <if test="isHavingBreakfast != null">
+    and itrip_hotel_room.is_having_breakfast = #
+    {isHavingBreakfast,jdbcType=INTEGER}</if>
+    <if test="isTimelyResponse != null">
+      and is_timely_response =#{isTimelyResponse,jdbcType=INTEGER}
+    </if>
+    <if test="roomBedTypeId!=null">
+      and room_bed_type_id =#{roomBedTypeId,jdbcType=BIGINT}
+    </if>
+    <if test="startDate != null and endDate != null">
+      and itrip_hotel_temp_store.record_date between #{startDate,jdbcType=TIMESTAMP}
+      and #{endDate,jdbcType=TIMESTAMP}
+    </if>
+    <if test="isCancel != null">
+      and itrip_hotel_room.is_cancel = #{isCancel,jdbcType=INTEGER}
+    </if>
+    <if test="payType != null">
+      and itrip_hotel_room.pay_type = #{payType,jdbcType=INTEGER}
+    </if>
+    group by itrip_hotel_room.id
+  </select>
+
 </mapper>
