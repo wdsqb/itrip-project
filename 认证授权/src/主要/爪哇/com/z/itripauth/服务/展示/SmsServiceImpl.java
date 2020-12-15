@@ -35,8 +35,7 @@ public class SmsServiceImpl implements SmsService {
     public void sendMsg(String to, String code) {
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou",
                 //这里我们直接写死用户的accessKeyId和secret
-                "LTAI4GH6r9TNun5vA988NYTa", "sadC8loRP8iMaLsGz2fZLNMQnsggJz");
-        IAcsClient client = new DefaultAcsClient(profile);
+     "自己的", "自己的");        IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
         request.setSysMethod(MethodType.POST);
         request.setSysDomain("dysmsapi.aliyuncs.com");
@@ -47,7 +46,7 @@ public class SmsServiceImpl implements SmsService {
         request.putQueryParameter("PhoneNumbers", to);
         //指定短信中的前缀
         request.putQueryParameter("SignName", "酒店客房管理助手");
-        request.putQueryParameter("TemplateCode", "SMS_205461334");
+        request.putQueryParameter("TemplateCode", "SMS_205461334")
         //指定变量，也就是生成的code
         Map<String, Object> jsonMap = new HashMap<>();
         jsonMap.put("code", code);
